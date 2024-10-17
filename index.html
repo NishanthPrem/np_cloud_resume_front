@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Additional styling for Hero Section */
+        .hero {
+            background: linear-gradient(135deg, #4A90E2, #357ABD);
+            padding: 60px 20px;
+            text-align: center;
+            color: white;
+        }
+    </style>
+</head>
+<body class="bg-gray-100 font-sans text-gray-800">
+
+    <!-- Header Section -->
+    <header class="bg-white shadow-md py-6">
+        <nav class="container mx-auto flex justify-end">
+            <ul class="flex space-x-6 text-blue-600 font-semibold">
+                <li><a href="#about" class="hover:text-blue-800">About</a></li>
+                <li><a href="#projects" class="hover:text-blue-800">Projects</a></li>
+                <li><a href="#skills" class="hover:text-blue-800">Skills</a></li>
+                <li><a href="#contact" class="hover:text-blue-800">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="hero">
+            <h1 class="text-4xl font-bold mb-4">Hi, I'm Nishanth</h1>
+            <p class="text-xl font-light">Software Engineer | AWS | Cybersecurity | Tech Enthusiast</p>
+        </div>
+    </header>
+
+    <!-- About Section -->
+    <section id="about" class="py-16 bg-white shadow-lg">
+        <div class="container mx-auto text-center">
+            <h2 class="text-3xl font-bold mb-6">About Me</h2>
+            <p class="text-lg max-w-2xl mx-auto text-gray-600">Hello! I'm Nishanth Prem, a passionate Cloud Engineer with experience in Python Automation and Data Analysis. I enjoy coding, designing, and solving problems through technology.</p>
+        </div>
+    </section>
+
+    <!-- Visitor Counter Section -->
+    <section id="visitor-counter" class="py-16 bg-gray-50 shadow-lg">
+        <div class="container mx-auto text-center">
+            <h2 class="text-3xl font-bold mb-4">Visitor Count</h2>
+            <p class="text-lg text-gray-700">Total Visitors: <span id="visitorCount" class="text-blue-500 font-semibold">0</span></p>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="py-16 bg-white shadow-lg">
+        <div class="container mx-auto text-center">
+            <h2 class="text-3xl font-bold mb-6">Projects</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div class="project bg-gray-100 p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow">
+                    <h3 class="text-xl font-semibold mb-3">Sentiment Analysis</h3>
+                    <p class="text-gray-600">Description of your project.</p>
+                </div>
+                <div class="project bg-gray-100 p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow">
+                    <h3 class="text-xl font-semibold mb-3">Project 2</h3>
+                    <p class="text-gray-600">Description of your project.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="py-16 bg-gray-50 shadow-lg">
+        <div class="container mx-auto text-center">
+            <h2 class="text-3xl font-bold mb-6">Skills</h2>
+            <ul class="flex justify-center space-x-4">
+                <li class="bg-blue-500 text-white px-4 py-2 rounded-full">Python</li>
+                <li class="bg-blue-500 text-white px-4 py-2 rounded-full">AWS</li>
+                <li class="bg-blue-500 text-white px-4 py-2 rounded-full">Go</li>
+                <li class="bg-blue-500 text-white px-4 py-2 rounded-full">Linux</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-16 bg-white shadow-lg">
+        <div class="container mx-auto text-center">
+            <h2 class="text-3xl font-bold mb-6">Contact Me</h2>
+            <div class="flex justify-center space-x-6 text-lg">
+                <p>Email: <a href="mailto:nishanthprem8@gmail.com" class="text-blue-500 hover:text-blue-700">nishanthprem8@gmail.com</a></p>
+                <p>LinkedIn: <a href="https://www.linkedin.com/in/nishanthprem/" target="_blank" class="text-blue-500 hover:text-blue-700">Nishanth Prem</a></p>
+            </div>
+        </div>
+    </section>
+
+</body>
+</html>

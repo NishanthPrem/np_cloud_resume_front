@@ -1,0 +1,234 @@
+/* Global Styles */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f5f5f5;
+    color: #333;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+    transition: color 0.3s ease;
+}
+
+h1, h2, h3 {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+}
+
+h1 {
+    font-size: 2.8em;
+    color: #333;
+    padding: auto;
+}
+
+h2 {
+    font-size: 2.2em;
+    color: #555;
+}
+
+h3 {
+    font-size: 1.7em;
+}
+
+/* Header Styles */
+header {
+    background: linear-gradient(90deg, #4A90E2, #357ABD);
+    color: #fff;
+    padding: 20px;
+    position: relative;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+header nav {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+header nav ul li {
+    display: inline-block;
+}
+
+header nav ul li a {
+    color: #fff;
+    font-size: 1.1em;
+    padding: 10px 20px;
+    border: 2px solid transparent;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+
+header nav ul li a:hover {
+    background-color: #fff;
+    color: #4A90E2;
+}
+
+/* Section Styles */
+section {
+    padding: 60px 20px;
+    text-align: center;
+    background-color: #fff;
+    margin: 20px 0;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+
+section:nth-child(even) {
+    background-color: #f0f4f7;
+}
+
+section h2 {
+    margin-bottom: 20px;
+    color: #333;
+    position: relative;
+}
+
+section h2::after {
+    content: '';
+    width: 50px;
+    height: 4px;
+    background: #4A90E2;
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+p {
+    font-size: 1.1em;
+    color: #666;
+}
+
+/* About Section */
+#about {
+    padding: 40px 20px;
+}
+
+#about p {
+    max-width: 700px;
+    margin: 0 auto;
+    font-size: 1em;
+    color: #666;
+    line-height: 1.5;
+}
+
+/* Visitor Counter Section */
+#visitor-counter {
+    padding: 40px 20px;
+    text-align: center;
+    background-color: #fff;
+    margin: 20px 0;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+
+#visitor-counter h2 {
+    font-size: 2em;
+    margin-bottom: 10px;
+}
+
+#visitor-counter p {
+    font-size: 1.5em;
+    color: #333;
+}
+
+/* Project Section */
+#projects .project {
+    display: inline-block;
+    width: 300px;
+    margin: 20px;
+    padding: 20px;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+#projects .project:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+#projects h3 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+#projects p {
+    font-size: 1em;
+    color: #666;
+}
+
+/* Skills Section */
+#skills ul {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+#skills ul li {
+    display: inline-block;
+    margin: 10px;
+    padding: 10px 20px;
+    background: #4A90E2;
+    color: white;
+    border-radius: 20px;
+    font-size: 1.1em;
+    transition: background-color 0.3s ease;
+}
+
+#skills ul li:hover {
+    background-color: #357ABD;
+}
+
+/* Contact Section */
+#contact .contact-links {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+}
+
+#contact p {
+    font-size: 1.2em;
+    color: #666;
+}
+
+#contact a {
+    color: #4A90E2;
+    font-weight: bold;
+    font-size: 1.2em;
+    transition: color 0.3s ease;
+}
+
+#contact a:hover {
+    color: #357ABD;
+}
+
+/* Footer Section */
+footer {
+    padding: 20px;
+    background: #333;
+    color: #fff;
+    text-align: center;
+    box-shadow: 0px -4px 8px rgba(0, 0, 0, 0.1);
+}
