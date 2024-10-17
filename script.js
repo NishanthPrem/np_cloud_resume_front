@@ -14,10 +14,12 @@ fetch(apiGatewayUrl, {
     return response.json(); // Assuming the API returns JSON
 })
 .then(data => {
-    const visitorCount = data.visitorCount || 'N/A'; // Assuming the API returns { "visitorCount": 123 }
+        // The body contains a string, so we need to parse it
+        const bodyString = data.body;
+        const visitorCount = bodyString.match(/\d+/)[0];
 
-    // Update the visitor count in the DOM
-    document.getElementById('visitorCount').textContent = visitorCount;
+        // Update the visitor count in the DOM
+        document.getElementById('visitorCount').textContent = visitorCount;
 })
 .catch((error) => {
     console.error('Error fetching visitor count:', error);
