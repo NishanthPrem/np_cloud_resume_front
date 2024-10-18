@@ -34,8 +34,8 @@ function fetchVisitorCount() {
             document.getElementById('visitorCount').textContent = 'Error';
         });
     } else {
-        // If the count has already been fetched, just display a message or the last known count
-        document.getElementById('visitorCount').textContent = "Visitor count has already been fetched.";
+        // If the count has already been fetched, last known count
+        document.getElementById('visitorCount').textContent = visitorCount;
     }
 }
 
