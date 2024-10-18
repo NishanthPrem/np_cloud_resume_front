@@ -29,7 +29,6 @@ h1, h2, h3 {
 h1 {
     font-size: 2.8em;
     color: #333;
-    padding: auto;
 }
 
 h2 {
@@ -125,10 +124,6 @@ p {
 }
 
 /* About Section */
-#about {
-    padding: 40px 20px;
-}
-
 #about p {
     max-width: 700px;
     margin: 0 auto;
@@ -138,20 +133,6 @@ p {
 }
 
 /* Visitor Counter Section */
-#visitor-counter {
-    padding: 40px 20px;
-    text-align: center;
-    background-color: #fff;
-    margin: 20px 0;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-    border-radius: 10px;
-}
-
-#visitor-counter h2 {
-    font-size: 2em;
-    margin-bottom: 10px;
-}
-
 #visitor-counter p {
     font-size: 1.5em;
     color: #333;
@@ -172,16 +153,6 @@ p {
 #projects .project:hover {
     transform: scale(1.05);
     box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
-}
-
-#projects h3 {
-    font-size: 1.5em;
-    margin-bottom: 10px;
-}
-
-#projects p {
-    font-size: 1em;
-    color: #666;
 }
 
 /* Skills Section */
@@ -209,12 +180,6 @@ p {
 }
 
 /* Contact Section */
-#contact .contact-links {
-    display: flex;
-    justify-content: center;
-    gap: 40px;
-}
-
 #contact p {
     font-size: 1.2em;
     color: #666;
