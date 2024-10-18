@@ -3,7 +3,7 @@ const apiGatewayUrl = "https://kdyymm92fc.execute-api.us-west-1.amazonaws.com";
 // Function to fetch visitor count
 function fetchVisitorCount() {
     fetch(apiGatewayUrl, {
-        method: 'GET',
+        method: 'POST',
         headers: {
             'Content-Type': 'application/json'
         }
