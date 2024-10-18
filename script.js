@@ -2,7 +2,7 @@ const apiGatewayUrl = "https://kdyymm92fc.execute-api.us-west-1.amazonaws.com/";
 
 // Function to trigger API Gateway and get visitor count
 function fetchVisitorCount() {
-    
+
     // Check if the visitor count has already been fetched
     const hasVisited = localStorage.getItem('hasVisited');
 
@@ -21,7 +21,7 @@ function fetchVisitorCount() {
             return response.json();
         })
         .then(data => {
-            const visitorCount = data.visitorCount; /
+            const visitorCount = data.visitorCount;
 
             // Update the visitor count in the DOM
             document.getElementById('visitorCount').textContent = visitorCount;
