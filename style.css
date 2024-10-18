@@ -41,6 +41,13 @@ h3 {
     font-size: 1.7em;
 }
 
+.hero {
+    background: linear-gradient(135deg, #4A90E2, #357ABD);
+    padding: 60px 20px;
+    text-align: center;
+    color: white;
+}
+
 /* Header Styles */
 header {
     background: linear-gradient(90deg, #4A90E2, #357ABD);
