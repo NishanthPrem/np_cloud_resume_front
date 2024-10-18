@@ -1,4 +1,4 @@
-const apiGatewayUrl = "https://kdyymm92fc.execute-api.us-west-1.amazonaws.com/"; // Ensure this is the correct resource path
+const apiGatewayUrl = "https://kdyymm92fc.execute-api.us-west-1.amazonaws.com/$default";
 
 // Function to fetch visitor count
 function fetchVisitorCount() {
