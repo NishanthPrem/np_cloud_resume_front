@@ -1,13 +1,13 @@
-const apiGatewayUrl = "https://kdyymm92fc.execute-api.us-west-1.amazonaws.com/"; // Ensure this is the correct endpoint with the correct stage
+const apiGatewayUrl = "https://kdyymm92fc.execute-api.us-west-1.amazonaws.com/";
 
 // Function to trigger API Gateway and get visitor count
 function fetchVisitorCount() {
     fetch(apiGatewayUrl, {
-        method: 'POST',  // Keep the method as POST since that's how your API expects it
+        method: 'POST',
         headers: {
             'Content-Type': 'application/json'
         },
-        body: JSON.stringify({}) // Empty body, similar to your working request
+        body: JSON.stringify({}) // Sending an empty body as no input is needed
     })
     .then(response => {
         if (!response.ok) {
@@ -16,10 +16,9 @@ function fetchVisitorCount() {
         return response.json(); // Parse the JSON response
     })
     .then(data => {
-        // Parse the stringified JSON inside the 'body' field
-        const visitorData = JSON.parse(data.body);  // Parse the body to extract visitorCount
-        const visitorCount = visitorData.visitorCount; // Extract the count
-        
+        // No need to parse 'data.body' again; it should already be an object
+        const visitorCount = data.visitorCount; // Extract the count directly
+
         // Update the visitor count in the DOM
         document.getElementById('visitorCount').textContent = visitorCount;
     })
