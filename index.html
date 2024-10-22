@@ -3,127 +3,153 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Portfolio</title>
+    <title>Nishanth Prem | Portfolio</title>
     <link rel="stylesheet" href="style.css">
-    <script src="script.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    
-    <!-- Header Section -->
-    <header>
-        <nav>
-            <ul>
+    <nav class="navbar">
+        <div class="nav-content">
+            <div class="logo">NP</div>
+            <ul class="nav-links">
                 <li><a href="#about">About</a></li>
                 <li><a href="#projects">Projects</a></li>
                 <li><a href="#skills">Skills</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
-        </nav>
-        <div class="hero">
+        </div>
+    </nav>
+
+    <header class="hero">
+        <div class="hero-content">
             <h1>Hi, I'm Nishanth</h1>
             <h2>Cloud Engineer | Software Developer | AWS Certified</h2>
+            <div class="cta-buttons">
+                <a href="#contact" class="cta-primary">Get in Touch</a>
+                <a href="#projects" class="cta-secondary">View Projects</a>
+            </div>
         </div>
     </header>
 
-    <!-- About Section -->
-    <section id="about">
-        <h2>About Me</h2>
-        <p>Hello! I'm Nishanth Prem, a passionate Cloud Engineer with experience in Python Automation, Data Analysis, and Machine Learning. With a background in software development, I enjoy coding, designing, and solving complex problems using technology. Currently pursuing my M.S. in Information Technology (Security) at Arizona State University.</p>
-    </section>
+    <main>
+        <section id="about" class="container">
+            <h2 class="section-title">About Me</h2>
+            <div class="about-content">
+                <p>Hello! I'm Nishanth Prem, a passionate Cloud Engineer with experience in Python Automation, Data Analysis, and Machine Learning. With a background in software development, I enjoy coding, designing, and solving complex problems using technology. Currently pursuing my M.S. in Information Technology (Security) at Arizona State University.</p>
+            </div>
+        </section>
 
-    <!-- Visitor Counter Section -->
-    <section id="visitor-counter">
-        <h2>Visitor Count</h2>
-        <p>Total Visitors: <span id="visitorCount">0</span></p>
-    </section>
+        <section id="projects" class="container">
+            <h2 class="section-title">Featured Projects</h2>
+            <div class="projects-grid">
+                <article class="project-card">
+                    <div class="project-content">
+                        <h3>Churn Prediction Model</h3>
+                        <p>Built customer churn prediction models using PyTorch and TensorFlow, leveraging Artificial Neural Networks to analyze financial datasets efficiently. Deployed models on AWS EC2 instances for optimized processing.</p>
+                        <div class="project-tags">
+                            <span>PyTorch</span>
+                            <span>TensorFlow</span>
+                            <span>AWS</span>
+                        </div>
+                    </div>
+                </article>
 
-    <!-- Projects Section -->
-    <section id="projects">
-        <h2>Projects</h2>
-        <div class="project">
-            <h3>Churn Prediction Model</h3>
-            <p>Built customer churn prediction models using PyTorch and TensorFlow, leveraging Artificial Neural Networks to analyze financial datasets efficiently. Deployed models on AWS EC2 instances for optimized processing.</p>
-        </div>
-        <div class="project">
-            <h3>House Price Prediction Model</h3>
-            <p>Developed a Random Forest Regressor for predicting house prices, improving accuracy by 25% through advanced feature engineering and hyperparameter tuning using Python and scikit-learn.</p>
-        </div>
-        <div class="project">
-            <h3>Sentiment Analysis</h3>
-            <p>Created a Naive Bayes classifier to analyze restaurant reviews with high accuracy, utilizing advanced preprocessing techniques with Python, NLTK, and scikit-learn for effective text classification.</p>
-        </div>
+                <article class="project-card">
+                    <div class="project-content">
+                        <h3>3D Portfolio</h3>
+                        <p>Developed a personal website using JavaScript, React, and 3JS, featuring interactive 3D elements for enhanced user experience. Demonstrated expertise in modern frontend development, including dynamic user interfaces.</p>
+                        <div class="project-tags">
+                            <span>React</span>
+                            <span>Three.js</span>
+                            <span>JavaScript</span>
+                        </div>
+                    </div>
+                </article>
 
-        <div class="project">
-            <h3>Go Web Crawler</h3>
-            <p>Developed a CLI web crawler in Go that recursively crawls webpages, tracking and reporting the number of times each site is visited. Utilized Goroutines to manage concurrency and implemented input validation for configurable crawling parameters, including base URL, maximum concurrency, and maximum pages. Demonstrated proficiency in Go, recursion, and concurrency handling.</p>
-        </div>
+                <article class="project-card">
+                    <div class="project-content">
+                        <h3>Google Stock Price Predictor</h3>
+                        <p>Built a stock price prediction model using Python, TensorFlow, and LSTM neural networks. The model predicts future Google stock prices based on historical data, utilizing 60 timesteps for past price analysis.</p>
+                        <div class="project-tags">
+                            <span>Python</span>
+                            <span>LSTM</span>
+                            <span>TensorFlow</span>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </section>
 
-        <div class="project">
-            <h3>3D Portfolio</h3>
-            <p>Developed a personal website using JavaScript, React, and 3JS, featuring interactive 3D elements for enhanced user experience. Demonstrated expertise in modern frontend development, including dynamic user interfaces, web-based 3D rendering, and responsive design.</p>
-        </div>
+        <section id="skills" class="container">
+            <h2 class="section-title">Skills</h2>
+            <div class="skills-grid">
+                <div class="skill-category">
+                    <h3>Languages</h3>
+                    <div class="skill-tags">
+                        <span>Python</span>
+                        <span>Go</span>
+                        <span>Java</span>
+                        <span>Rust</span>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <h3>Cloud & DevOps</h3>
+                    <div class="skill-tags">
+                        <span>AWS</span>
+                        <span>Docker</span>
+                        <span>Terraform</span>
+                        <span>Linux</span>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <h3>Web Development</h3>
+                    <div class="skill-tags">
+                        <span>HTML</span>
+                        <span>CSS</span>
+                        <span>JavaScript</span>
+                        <span>Django</span>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <h3>Data & ML</h3>
+                    <div class="skill-tags">
+                        <span>PyTorch</span>
+                        <span>TensorFlow</span>
+                        <span>MongoDB</span>
+                        <span>MySQL</span>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-        <div class="project">
-            <h3>RSS Feed Reader</h3>
-            <p>Developed an RSS Feed Reader in Python using the `feedparser` library, which allows users to input a feed URL, validates the URL, and retrieves the latest entries including titles, links, and descriptions. Implemented error handling for invalid URLs and utilized `urllib.parse` for URL parsing, demonstrating skills in data parsing, user input handling, and working with external data sources.</p>
-        </div>
+        <section id="contact" class="container">
+            <h2 class="section-title">Get in Touch</h2>
+            <div class="contact-content">
+                <div class="contact-links">
+                    <a href="mailto:nishanthprem8@gmail.com" class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <span>nishanthprem8@gmail.com</span>
+                    </a>
+                    <a href="https://www.linkedin.com/in/nishanthprem/" target="_blank" class="contact-item">
+                        <i class="fab fa-linkedin"></i>
+                        <span>LinkedIn</span>
+                    </a>
+                    <a href="https://github.com/NishanthPrem" target="_blank" class="contact-item">
+                        <i class="fab fa-github"></i>
+                        <span>GitHub</span>
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
 
-        <div class="project">
-            <h3>Google Stock Price Predictor</h3>
-            <p>Built a stock price prediction model using Python, TensorFlow, and LSTM neural networks. The model predicts future Google stock prices based on historical data, utilizing 60 timesteps for past price analysis. Applied feature scaling, data preprocessing, and reshaped inputs to optimize for LSTM layers. Implemented multiple LSTM layers with dropout regularization to prevent overfitting, and trained the model using mean squared error loss with the Adam optimizer. Visualized real vs. predicted prices using Matplotlib for performance analysis. Demonstrated proficiency in time series forecasting, deep learning, and data visualization.</p>
-        </div>
-    </section>
-
-    <!-- Skills Section -->
-    <section id="skills">
-        <h2>Skills</h2>
-        <ul>
-            <li>Python</li>
-            <li>AWS</li>
-            <li>Go</li>
-            <li>Linux</li>
-            <li>Git</li>
-            <li>Java</li>
-            <li>HTML</li>
-            <li>CSS</li>
-            <li>JavaScript</li>
-            <li>Rust</li>
-            <li>MongoDB</li>
-            <li>MySQL</li>
-            <li>Django</li>
-            <li>PyTorch</li>
-            <li>TensorFlow</li>
-            <li>Docker</li>
-            <li>Terraform</li>
-            <li>Wireshark</li>
-        </ul>
-    </section>
-
-    <!-- Contact Section -->
-    <section id="contact">
-        <h2>Contact Me</h2>
-        <p>Email: <a href="mailto:nishanthprem8@gmail.com">nishanthprem8@gmail.com</a></p>
-        <p>LinkedIn: <a href="https://www.linkedin.com/in/nishanthprem/" target="_blank">Nishanth Prem</a></p>
-        <p>GitHub: <a href="https://github.com/NishanthPrem" target="_blank">NishanthPrem</a></p>
-    </section>
-
-    <!-- Footer Section -->
     <footer>
         <div class="footer-content">
-            <div class="footer-social">
-                <a href="https://www.linkedin.com/in/nishanthprem/" target="_blank" aria-label="LinkedIn Profile">
-                    <i class="fab fa-linkedin"></i>
-                </a>
-                <a href="https://github.com/NishanthPrem" target="_blank" aria-label="GitHub Profile">
-                    <i class="fab fa-github"></i>
-                </a>
-            </div>
-            <div class="footer-text">
-                <p>&copy; 2024 Nishanth Prem. All rights reserved.</p>
-                <p>Made with HTML, CSS, and JavaScript</p>
-            </div>
+            <p>&copy; 2024 Nishanth Prem. All rights reserved.</p>
         </div>
     </footer>
-
 </body>
 </html>
