@@ -1,44 +1,68 @@
-const apiGatewayUrl = "https://kdyymm92fc.execute-api.us-west-1.amazonaws.com/";
+// Configure the API endpoint
+const API_CONFIG = {
+    url: 'https://kdyymm92fc.execute-api.us-west-1.amazonaws.com/',
+    method: 'POST',
+    headers: {
+        'Content-Type': 'application/json'
+    }
+};
 
-// Function to trigger API Gateway and get visitor count
-function fetchVisitorCount() {
-    // Check if the visitor count has already been fetched
-    const visitorCount = localStorage.getItem('visitorCount');
-
-    if (!visitorCount) {
-        fetch(apiGatewayUrl, {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json'
-            },
-            body: JSON.stringify({}) // Sending an empty body as no input is needed
-        })
-        .then(response => {
-            if (!response.ok) {
-                throw new Error('Network response was not ok: ' + response.statusText);
-            }
-            return response.json(); // Parse the JSON response
-        })
-        .then(data => {
-            const newVisitorCount = data.visitorCount; // Extract the count directly
-
-            // Update the visitor count in the DOM
-            document.getElementById('visitorCount').textContent = newVisitorCount;
-
-            // Store the visitor count in local storage
-            localStorage.setItem('visitorCount', newVisitorCount);
-        })
-        .catch((error) => {
-            console.error('Error fetching visitor count:', error);
-            document.getElementById('visitorCount').textContent = 'Error';
-        });
-    } else {
-        // If the count has already been fetched, display the stored count
-        document.getElementById('visitorCount').textContent = visitorCount;
+// Function to update the DOM with visitor count
+function updateVisitorDisplay(count) {
+    const counterElement = document.getElementById('visitorCount');
+    if (counterElement) {
+        counterElement.textContent = count;
     }
 }
 
-// Invoke the fetchVisitorCount function when the DOM is fully loaded
-document.addEventListener('DOMContentLoaded', (event) => {
-    fetchVisitorCount();
-});
+// Function to handle errors
+function handleError(error) {
+    console.error('Error fetching visitor count:', error);
+    updateVisitorDisplay('Error loading count');
+}
+
+// Main function to fetch and update visitor count
+async function fetchVisitorCount() {
+    // Check if we've already counted this visit
+    const hasVisited = sessionStorage.getItem('hasVisited');
+    
+    if (hasVisited) {
+        // If we've already counted this visit, just display the stored count
+        const storedCount = sessionStorage.getItem('visitorCount');
+        if (storedCount) {
+            updateVisitorDisplay(storedCount);
+            return;
+        }
+    }
+
+    try {
+        // Make the API call
+        const response = await fetch(API_CONFIG.url, {
+            method: API_CONFIG.method,
+            headers: API_CONFIG.headers,
+            body: JSON.stringify({})
+        });
+
+        if (!response.ok) {
+            throw new Error(`HTTP error! status: ${response.status}`);
+        }
+
+        const data = await response.json();
+        
+        if (data && typeof data.visitorCount !== 'undefined') {
+            // Store the count and mark this visit
+            sessionStorage.setItem('visitorCount', data.visitorCount);
+            sessionStorage.setItem('hasVisited', 'true');
+            
+            // Update the display
+            updateVisitorDisplay(data.visitorCount);
+        } else {
+            throw new Error('Invalid response format');
+        }
+    } catch (error) {
+        handleError(error);
+    }
+}
+
+// Initialize the counter when the page loads
+document.addEventListener('DOMContentLoaded', fetchVisitorCount);
