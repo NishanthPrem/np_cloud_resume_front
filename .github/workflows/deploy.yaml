@@ -26,3 +26,12 @@ jobs:
           aws s3 cp index.html s3://np-cloud-resume/index.html --acl public-read
           aws s3 cp style.css s3://np-cloud-resume/style.css --acl public-read
           aws s3 cp script.js s3://np-cloud-resume/script.js --acl public-read
+        
+      - name: Invalidate CloudFront Cache
+        env:
+          AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          AWS_REGION: us-west-1
+        run: |
+          echo "Invalidating CloudFront cache..."
+          aws cloudfront create-invalidation --distribution-id E1AC93Y4DDIJC6 --paths "/*"
